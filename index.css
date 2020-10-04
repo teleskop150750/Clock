@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Digital";  
+  font-family: "Digital";
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -51,17 +51,15 @@
 
 .header__button-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .header__button {
-  padding: 10px 20px;
   border: none;
   font-size: inherit;
   font-family: inherit;
   background: transparent;
   color: #ffffff;
-  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -73,7 +71,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  padding: 100px 50px;
+  padding: 100px 0;
 }
 
 .clock__button-wrapper {
@@ -85,8 +83,8 @@
 }
 
 .clock__button {
-  width: 14rem;
-  height: 1rem;
+  /* width: 14rem; */
+  /* height: 1rem; */
   background-color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
@@ -94,16 +92,12 @@
   cursor: pointer;
 }
 
-.clock__button--active {
-  height: 1.5rem;
-}
-
 .clock__time-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   justify-items: center;
-  width: 42rem;
+  max-width: 42rem;
   padding: 1rem;
   border: 0.5rem solid #000000;
   background-image: linear-gradient(to right, #2c4761, #3498db);
@@ -133,7 +127,6 @@
   display: grid;
   grid-template-columns: repeat(3, min-content);
   font-family: 'Digital', monospace;
-  font-size: 8rem;
   user-select: none;
 }
 
@@ -165,16 +158,71 @@
 
 .form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   grid-column: 1rem;
   background-color: var(--blue);
 }
 
 .form__input {
-  padding: 10px;
-  font-size: 1.5rem;
+  width: 100%;
   background-color: transparent;
   border: none;
   font-family: inherit;
   text-align: center;
+}
+
+@media (min-width: 319px) {
+  .header__button {
+    padding: 0.5rem 0.1rem;
+    font-size: 1.5rem;
+  }
+
+  .form__input {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  .clock__button {
+    width: 7rem;
+    height: 0.6rem;
+  }
+
+  .clock__button--active {
+    height: 1.0rem;
+  }
+
+  .clock__time-wrapper {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 424px) {
+  .clock__time-wrapper {
+    font-size: 4.8rem;
+  }
+}
+
+@media (min-width: 767px) {
+  .header__button {
+    padding: 1.1rem 0.1rem;
+    font-size: 2rem;
+  }
+
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clock__button {
+    width: 14rem;
+    height: 1rem;
+  }
+
+  .clock__button--active {
+    height: 1.5rem;
+  }
+
+  .clock__time-wrapper {
+    width: 42rem;
+    font-size: 8rem;
+  }
 }
