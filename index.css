@@ -126,7 +126,6 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  padding: 1px;
   font-family: 'Digital', monospace;
   user-select: none;
 }

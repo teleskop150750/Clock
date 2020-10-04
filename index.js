@@ -15,7 +15,7 @@ class Clock {
   static clockArray = [new Clock(), new Clock()];
 
   static play = () => {
-    if(Clock.clockArray[0].isNull || Clock.clockArray[1].isNull){
+    if (Clock.clockArray[0].isNull || Clock.clockArray[1].isNull) {
       return;
     }
     Clock.isPlay = true;
@@ -89,12 +89,12 @@ class Clock {
 
   time = new Date(0);
   isGo = false;
-  isNull = true; 
+  isNull = true;
 
   setTime(min, sec) {
     this.time.setMinutes(min);
     this.time.setSeconds(sec);
-    if(sec >= 0 || min > 0){
+    if (sec >= 0 || min > 0) {
       this.isNull = false;
     }
   }
@@ -135,11 +135,11 @@ class Clock {
 
     setTimeout(func.bind(this), 500);
   }
-  
+
   stop() {
     this.isGo = false;
   }
-  
+
   clear(id) {
     this.stop();
     this.time = new Date(0);
