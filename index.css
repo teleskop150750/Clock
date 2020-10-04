@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'DS Crystal';
+  font-family: "Digital";  
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: url(/fonts/font.ttf);
+  font-display: swap;
+  src: url("./fonts/font.woff2") format("woff2");
 }
 
 :root {
@@ -131,7 +132,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  font-family: 'DS Crystal';
+  font-family: 'Digital', monospace;
   font-size: 8rem;
   user-select: none;
 }
