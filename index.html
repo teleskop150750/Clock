@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Часы</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="page__body">
+  <header class="page__header header">
+    <div class="header__button-wrapper">
+      <button class="header__button play" type="button">старт</button>
+      <button class="header__button stop" disabled type="button">стоп</button>
+      <button class="header__button clear" type="button">очистка</button>
+    </div>
+  </header>
+
+  <main class="page__main">
+    <h1 class="visually-hidden">сайт</h1>
+
+    <section class="clock-section">
+      <h2 class="visually-hidden">секундомер</h2>
+
+      <div class="clock">
+        <div class="clock__button-wrapper">
+          <button class="clock__button" disabled data-id="0" aria-label="01"></button>
+          <button class="clock__button clock__button--active" data-id="1" aria-label="02"></button>
+        </div>
+
+        <div class="clock__time-wrapper">
+            <p class="clock__time clock__time--1">
+              <span class="clock__time-m">00</span>
+              <span class="clock__time-point clock__time-point--active">:</span>
+              <span class="clock__time-s">00</span>
+            </p>
+            <span class="clock__separator"></span>
+            <p class="clock__time clock__time--2">
+              <span class="clock__time-m">00</span>
+              <span class="clock__time-point clock__time-point--active">:</span>
+              <span class="clock__time-s">00</span>
+            </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page__footer footer">
+    
+    <form class="footer__form form">
+      <input class="form__input" data-id="0" type="text" value="00:00">
+      <input class="form__input" data-id="1" type="text" value="00:00">
+
+    </form>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
